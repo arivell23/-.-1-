@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компания по изготовлению кухонь</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class ="header-line">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="Logo">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#products">Продукция</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#account" id="accountBtn">Личный кабинет</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <h1>Добро пожаловать в нашу компанию</h1>
+                <p>Изготавливаем кухни на заказ с учётом всех ваших пожеланий</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>Компания «НАША КУХНЯ» - это команда профессионалов, которые любят и гордятся своим делом. Более чем 10-ти летний опыт в кухонном производстве позволяет нам воплощать мечты наших клиентов об «Идеальной кухне».
+                Нашим приоритетом всегда остается высокое качество наших услуг на всех этапах: от проектирования, производства и до установки кухни в ваш дом.
+                Ведь мы понимаем, что кухня — это центр притяжения семьи и ценим Ваше доверие.
+                <p>НУЖНА НЕСТАНДАРТНАЯ КУХНЯ?</p>
+                Мы не ограничиваем наше производство стандартными модулями, а подходим к проектированию кухни индивидуально! С нами вы сможете реализовать все свои идеи.</p>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="container">
+                <h2>Наша продукция</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="images/kitchen1.jpg" alt="Кухня 1">
+                        <h3>Современная кухня</h3>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/kitchen2.jpg" alt="Кухня 2">
+                        <h3>Классическая кухня</h3>
+                    </div>
+                    <!-- Добавьте больше продуктов по аналогии -->
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <ul>
+                    <li>Дизайн и проектирование</li>
+                    <li>Установка и монтаж</li>
+                    <li>Обслуживание и ремонт</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <p>Если у вас остались вопросы, выбери способ для связи с нами nashakuhnya.spb@gmail.com.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Компания по изготовлению кухонь. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для Личного кабинета -->
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'Login')">Вход</button>
+                <button class="tablinks" onclick="openTab(event, 'Register')">Регистрация</button>
+            </div>
+            <div id="Login" class="tabcontent">
+                <h2>Вход</h2>
+                <form action="login.php" method="POST">
+                    <label for="login-username">Имя пользователя:</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Пароль:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+            <div id="Register" class="tabcontent">
+                <h2>Регистрация</h2>
+                <form id="registerForm" method="POST" action="register.php">
+                    <label for="register-username">Имя пользователя:</label>
+                    <input type="text" id="register-username" name="username" required>
+                    
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    
+                    <label for="register-password">Пароль:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    
+                    <!-- Поле для роли, скрытое для обычных пользователей -->
+                    <input type="hidden" name="role" value="user">
+
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
