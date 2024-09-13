@@ -1,0 +1,22 @@
+# Исключить папки сборки и временные файлы
+/build/
+/dist/
+/node_modules/
+
+# Временные файлы IDE
+*.log
+*.tmp
+*.swp
+
+# Файлы ОС
+.DS_Store
+Thumbs.db
+
+# Исключение скомпилированных файлов
+*.class
+*.o
+*.obj
+
+# Файлы Python
+*.pyc
+__pycache__/
